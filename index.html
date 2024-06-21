@@ -32,10 +32,10 @@
         <div class="container">
           <div class="left hidden">
             <p>Prioritize Your Health:</p>
-            <h3>
+            <h2>
               Low-Dose <span class="light">CT Scans</span> for Early Lung Cancer
               Screening
-            </h3>
+            </h2>
             <a class="btn btn-dark" href="#footer">
               Schedule your CT scan
               <div class="icon">
@@ -226,7 +226,7 @@
         <div class="container">
           <div class="left">
             <div class="top">
-              <h1>#1 CT scan in California</h1>
+              <h2>#1 CT scan in California</h2>
               <p class="para">
                 Tortor pretium viverra suspendisse potenti nullam ac tortor
                 vitae. Vitae tortor condimentum lacinia quis vel eros donec ac
@@ -590,41 +590,51 @@
             card.classList.add("active");
           });
         });
+
+        iniSwiper();
       });
 
       // Swiper
-      var swiper = new Swiper(".mySwiper", {
-        draggable: true,
-        centeredSlides: false,
-        breakpoints: {
-          340: {
-            slidesPerView: 1,
-            spaceBetween: 30,
+      function iniSwiper() {
+        const isMobile = window.innerWidth <= 992;
+        var swiper = new Swiper(".mySwiper", {
+          draggable: true,
+          autoplay: isMobile
+            ? {
+                delay: 2500,
+                disableOnInteraction: false,
+              }
+            : false,
+          centeredSlides: false,
+          breakpoints: {
+            340: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1424: {
+              slidesPerView: 3,
+              spaceBetween: 100,
+            },
           },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1424: {
-            slidesPerView: 3,
-            spaceBetween: 100,
-          },
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        rewind: true,
-      });
-
+          rewind: true,
+        });
+      }
       // marquee
       var elements = $("ul.marquee-item-list li").length;
       for (var i = 0; i < elements; i++) {

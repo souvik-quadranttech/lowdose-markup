@@ -35,6 +35,10 @@ section {
 a {
   text-decoration: none;
 }
+
+p {
+  margin-bottom: 0;
+}
 .m-2 {
   margin: 20px;
 }
@@ -114,7 +118,7 @@ a {
   cursor: pointer;
 }
 .btn-dark .icons {
-  color: var(--dark);
+  color: var(--deepBlue);
 }
 
 .btn-dark:hover {
@@ -174,6 +178,7 @@ a {
 
 .home {
   margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .home .container {
@@ -190,17 +195,19 @@ a {
 .home .left p {
   font-size: 32px;
   color: var(--dark);
-  margin-bottom: 10px;
   font-weight: bold;
 }
 
-.home .left h3 {
+.home .left h2{
   font-size: 75px;
   color: var(--dark);
   width: 80%;
   margin-bottom: 60px;
 }
 
+.home .left .badgeSec .badge{
+  width: 120px;
+}
 .home .left .badgeSec {
   display: flex;
   justify-content: flex-start;
@@ -257,7 +264,7 @@ a {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   mask-size: cover;
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
 }
 
 .home .right .heroImg::before {
@@ -693,7 +700,7 @@ a {
   width: 100%;
   height: 40%;
   position: absolute;
-  bottom: 4px;
+  bottom: 0px;
   left: 0;
   z-index: -1;
 }
@@ -706,12 +713,19 @@ a {
   padding-right: 5%;
 }
 
+.banner .container .right{
+  position: relative;
+  bottom: -4px;
+}
+
 .banner .container .right img {
   margin-top: -15%;
   z-index: 10;
+  position: relative
+  bottom: 0px;
 }
 
-.banner .container .left h1 {
+.banner .container .left h2 {
   font-size: 100px;
   font-weight: bold;
   color: var(--light);
@@ -1070,7 +1084,7 @@ a {
 
 .feedback .card h2 {
   margin-bottom: 20px;
-  font-size: 32px;
+  font-size: var(--h4);
   font-weight: bold;
   color: var(--dark);
 }
@@ -1106,9 +1120,9 @@ a {
 }
 
 .footer {
-  background: url(./Assets/footer-bg.png);
+  /* background: url(./Assets/footer-bg.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1117,7 +1131,39 @@ a {
   width: 100%;
   height: 570px;
   padding-top: 4%;
+  background-color: var(--dark);
+  z-index: 10;
 }
+
+.footer::before{
+  content: '';
+  width: 20%;
+  height: 100%;
+  background-image: url(./Assets/abstract.png);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 70%;
+  background-repeat: no-repeat;
+}
+.footer::after{
+  content: '';
+  width: 40%;
+  height: 100%;
+  background-image: url(./Assets/abstract.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: rotate(180deg);
+  opacity: 50%;
+
+}
+
 
 .footer .container {
   width: 100%;
@@ -1230,6 +1276,7 @@ a {
   padding: 0 20px;
   overflow: hidden;
   position: relative;
+  z-index: 1000;
 }
 
 .locations h4 {
@@ -1325,10 +1372,10 @@ a {
     --container: 0 8%;
     --h4: 40px;
   }
-  .home .left h3 {
+  .home .left h2{
     font-size: 64px;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 80px;
   }
   .care .container .top .right h3 {
@@ -1340,10 +1387,10 @@ a {
 }
 
 @media screen and (max-width: 1610px) {
-  .home .left h3 {
+  .home .left h2{
     font-size: 64px;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 80px;
   }
   .care .container .top .right h3 {
@@ -1373,13 +1420,13 @@ a {
     --container: 0 8%;
   }
 
-  .home .left h3 {
+  .home .left h2{
     font-size: 60px;
   }
   .home .left .badgeSec {
     margin-top: 60px;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 70px;
   }
   .service .container .bottom .card .card-body h4 {
@@ -1425,7 +1472,7 @@ a {
     --h4: 40px;
   }
 
-  .home .left h3 {
+  .home .left h2{
     font-size: 54px;
   }
 
@@ -1482,7 +1529,7 @@ a {
   .banner .container .bottom {
     bottom: 30px;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 56px;
   }
   .banner .container .left .para {
@@ -1497,6 +1544,9 @@ a {
   /* .footer .left img {
     min-width: 480px;
   } */
+  .home .left .badgeSec .reviews {
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1585,7 +1635,7 @@ a {
     background-size: contain;
   }
 
-  .home .left h3 {
+  .home .left h2{
     font-size: 48px;
     width: 100%;
   }
@@ -1638,7 +1688,7 @@ a {
     left: 6%;
   }
 
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 50px;
   }
 
@@ -1798,7 +1848,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 36px;
   }
 
@@ -1865,6 +1915,9 @@ a {
   .lungs {
     position: relative;
   }
+  .care .container .top .left .para{
+    line-height: 1.4rem;
+  }
   .lungs .container .right {
     width: 54%;
     position: absolute;
@@ -1882,9 +1935,38 @@ a {
   .home .left {
     width: 50%;
   }
-  .home .left h3 {
+  .home .left h2{
     font-size: 34px;
     margin-bottom: 30px;
+  }
+
+  .footer::before{
+    content: '';
+    width: 20%;
+    height: 100%;
+    background-image: url(./Assets/abstract.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 70%;
+    background-repeat: no-repeat;
+    display: none;
+  }
+  .footer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(./Assets/abstract.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transform: rotate(180deg);
+    opacity: 50%;
   }
 
   .home .badge {
@@ -1896,6 +1978,11 @@ a {
   }
   .service .container .bottom .card .card-body h4 {
     font-size: 20px;
+  }
+
+  .about .heading h4 {
+    margin-bottom: 15px;
+    width: 90%;
   }
 
   .banner .container .top {
@@ -1969,12 +2056,22 @@ a {
     margin-bottom: 50px;
   }
   .footer .right .flex-sec {
-    flex-direction: row;
+    flex-direction: column;
+    gap: 30px;
     justify-content: space-between;
     align-items: flex-start;
   }
   .footer .email {
     margin-top: 0;
+  }
+  .footer .email a {
+    font-size: 30px;
+  }
+  .footer .right .email h6 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--light);
+    margin-bottom: 10px;
   }
   .about {
     position: relative;
@@ -1997,6 +2094,16 @@ a {
   }
   .about .container .right h3 {
     width: 66%;
+  }
+  .feedback .card .para{
+    line-height: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .feedback .card h2{
+    font-size: 26px;
+  }
+  .service .container .bottom .card .card-image{
+    width: 80px;
   }
 }
 
@@ -2129,7 +2236,7 @@ a {
     justify-content: center;
     align-items: center;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     text-align: center;
   }
   .banner .container .left .top .para {
@@ -2355,7 +2462,7 @@ a {
     width: 60%;
     font-size: 18px;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 28px;
   }
   .about .container .about-percent {
@@ -2409,7 +2516,7 @@ a {
   .banner .container .left .top .para {
     width: 100%;
   }
-  .banner .container .left h1 {
+  .banner .container .left h2 {
     font-size: 26px;
   }
   .banner .container .bottom img {
