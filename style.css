@@ -2008,6 +2008,10 @@ a {
     --m-5: 30px;
     --container: 0 6%;
   }
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
   .banner {
     margin-top: 0;
   }
@@ -2344,14 +2348,14 @@ a {
   .banner {
     padding-top: 10%;
   }
-  .banner .container{
+  .banner .container {
     padding: var(--container);
   }
   .about .container .right h3 {
     width: 60%;
     font-size: 18px;
   }
-  .banner .container .left h1{
+  .banner .container .left h1 {
     font-size: 28px;
   }
   .about .container .about-percent {
@@ -2376,10 +2380,6 @@ a {
 }
 
 @media screen and (max-width: 380px) {
-  html {
-    overflow-x: hidden;
-    width: 100%;
-  }
   .footer .left img {
     min-width: 320px;
   }
