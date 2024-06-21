@@ -2101,7 +2101,7 @@ a {
     height: 280px;
   }
   .footer .left img {
-    min-width: 380px;
+    min-width: 100%;
   }
 
   .footer .logo {
@@ -2339,14 +2339,20 @@ a {
     gap: 20px;
   }
   .banner .container .left .top .para {
-    width: 80%;
+    width: 100%;
   }
   .banner {
     padding-top: 10%;
   }
+  .banner .container{
+    padding: var(--container);
+  }
   .about .container .right h3 {
     width: 60%;
     font-size: 18px;
+  }
+  .banner .container .left h1{
+    font-size: 28px;
   }
   .about .container .about-percent {
     align-items: center;
@@ -2357,6 +2363,15 @@ a {
   }
   .home .left .badgeSec {
     gap: 10px;
+  }
+  .navbar .logo {
+    width: 160px;
+  }
+  .navbar .nav_items a {
+    font-size: 20px;
+  }
+  .navbar .container {
+    align-items: flex-start;
   }
 }
 
