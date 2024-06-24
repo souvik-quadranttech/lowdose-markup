@@ -1644,6 +1644,16 @@ p {
     --container: 0 6%;
   }
 
+  .mobile{
+    display: block;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .heroImg{
+    display: none;
+  }
+
   .btn {
     padding: 10px 25px;
   }
@@ -2269,6 +2279,10 @@ p {
     --m-5: 30px;
     --container: 0 6%;
   }
+
+  .footer .email a,.footer .right .email h6{
+    font-size: 20px;
+  }
   .footer .left {
     height: 280px;
   }
@@ -2563,9 +2577,6 @@ p {
   .about .heading h4{
     width: 100%;
   }
-  .footer .email a,.footer .right .email h6{
-    font-size: 20px;
-  }
   .feedback .card h2{
     font-size: 22px;
     margin-bottom: 10px;
@@ -2576,14 +2587,27 @@ p {
 }
 
 @media screen and (max-width: 380px) {
+  :root {
+    --h4: 26px;
+    --para: 14px;
+    --section-margin: 26px 0;
+    --m-5: 30px;
+    --container: 0 6%;
+}
+.home{
+  margin-bottom: 30px;
+}
+.about .container .right p {
+  line-height: 1.4rem;
+}
   .footer .left img {
     min-width: 320px;
   }
   .navbar .logo {
-    width: 160px;
+    width: 130px;
   }
   .navbar .nav_items a {
-    font-size: 18px;
+    font-size: 16px;
   }
   .navbar .container {
     align-items: flex-start;
@@ -2629,7 +2653,31 @@ p {
     font-size: 18px;
   }
   .care .container .top .right h3{
-    font-size: 22px;
+    font-size: 28px;
     width: 100%;
+  }
+  .home .left p {
+    font-size: 16px;
+  }
+  .home .left h2{
+    font-size: 28px;
+  }
+  .home .right{
+    margin-top: 0;
+  }
+  .home .left .badgeSec{
+    margin-top: 30px
+  }
+  .cards .heading h4{
+    font-size: 26px;
+  }
+  .banner{
+    padding-top: 14%;
+  }
+  .feedback .card .card-foot{
+    padding: 15px 20px;
+  }
+  .footer .container .social{
+    gap: 15px;
   }
 }
