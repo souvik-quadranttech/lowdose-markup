@@ -83,6 +83,15 @@ p {
   margin-left: 10px;
 }
 
+.icon-mid{
+  width: 27px;
+  height: 27px;
+}
+.icon-star{
+  width: 16px;
+  height: 16px;
+}
+
 .mobile {
   display: none;
 }
@@ -207,6 +216,7 @@ p {
 
 .home .left .badgeSec .badge{
   width: 120px;
+  height: 120px;
 }
 .home .left .badgeSec {
   display: flex;
@@ -254,13 +264,13 @@ p {
   height: 100%;
   border-radius: 20px;
   transform-style: preserve-3d;
-  background: url(./Assets/lungs-hero.jpg);
+  background: url(./Assets/lungs-hero.webp);
   background-size: 60%;
   background-attachment: fixed;
   background-position: right center;
   background-repeat: no-repeat;
-  -webkit-mask-image: url(./Assets/shape.png);
-  mask-image: url(./Assets/shape.png);
+  -webkit-mask-image: url(./Assets/shape.webp);
+  mask-image: url(./Assets/shape.webp);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   mask-size: cover;
@@ -564,6 +574,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-self: center;
+  transition: all .7s cubic-bezier(0.26, 0.04, 0, 0.96);
 }
 
 .cards .card:nth-child(n) {
@@ -588,15 +599,22 @@ p {
 
 .cards .card.active .card-body {
   display: block;
+  opacity: 1;
 }
 
 .cards .card .card-btn {
-  display: none;
+  opacity: 0;
+}
+.cards .card .card-body {
+  margin-bottom: 60px;
+  opacity: 0;
+  transition: 1.5s ease;
 }
 
 .cards .card.active .card-btn {
   display: flex;
   width: max-content;
+  opacity: 1;
 }
 
 .cards .card-icon-btn {
@@ -611,7 +629,7 @@ p {
   background-color: var(--deepBlue);
   border: 1px solid transparent;
   width: fit-content;
-  padding: 11px 10px;
+  padding: 9px 10px;
   border-radius: 50px;
 }
 
@@ -619,10 +637,7 @@ p {
   display: none;
 }
 
-.cards .card .card-body {
-  margin-bottom: 60px;
-  display: none;
-}
+
 
 .cards .card h1 {
   font-size: 100px;
@@ -667,7 +682,7 @@ p {
 }
 
 .banner {
-  background-image: url(./Assets/background1.jpg);
+  background-image: url(./Assets/background1.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -689,7 +704,7 @@ p {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  background-image: url(./Assets/logo-icon-dark.png);
+  background-image: url(./Assets/logo-icon-dark.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -753,6 +768,7 @@ p {
 
 .banner .container .bottom img {
   width: 200px;
+  height: 100%;
   margin-right: 40px;
 }
 
@@ -848,7 +864,7 @@ p {
 }
 
 .care .container .bottom .count {
-  width: max-content;
+  width: 33.33%;
 }
 
 .care .container .bottom .count.center {
@@ -873,7 +889,7 @@ p {
 
 /* Services */
 .service {
-  background-image: url(./Assets/service-bg.png);
+  background-image: url(./Assets/service-bg.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -927,6 +943,12 @@ p {
   margin-right: 20px;
   padding: 40px;
   transition: 0.5s ease;
+}
+
+.service .container .bottom .card .card-image{
+  width: 134px;
+  height: 132px;
+  object-fit: contain;
 }
 
 .service .container .bottom .card:hover {
@@ -1120,7 +1142,7 @@ p {
 }
 
 .footer {
-  /* background: url(./Assets/footer-bg.png);
+  /* background: url(./Assets/footer-bg.webp);
   background-size: cover;
   background-repeat: no-repeat; */
   display: flex;
@@ -1181,6 +1203,10 @@ p {
   align-items: center;
   width: fit-content;
 }
+.footer .logo img {
+  width: 100%;
+  height: 100%;
+}
 
 .footer .flex-sec a {
   text-decoration: none;
@@ -1194,7 +1220,7 @@ p {
 }
 
 .footer .left {
-  width: 40%;
+  width: 48%;
   position: relative;
   height: 450px;
 }
@@ -1203,11 +1229,11 @@ p {
   width: 100%;
   position: absolute;
   bottom: 0;
-  min-width: 600px;
+  min-width: 689px;
 }
 
 .footer .right {
-  width: 40%;
+  width: 45%;
   margin-bottom: 40px;
 }
 .footer .right .flex-sec {
