@@ -1695,13 +1695,24 @@ p {
 
   .cards .card {
     min-height: 610px;
+    padding: 30px;
   }
   .cards .card.active {
     padding: 30px;
   }
+  
+  .cards .heading h4 {
+    margin-bottom: 50px;
+    width: 50%;
+    font-size: 36px;
+  }
 
   .banner .container {
     padding-right: 2%;
+  }
+
+  .lungs .container li{
+    line-height: 1.5rem;
   }
 
   .banner .container .bottom img {
@@ -1726,7 +1737,7 @@ p {
   }
 
   .care .container .top .right h3 p {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .care .container .bottom {
@@ -1850,6 +1861,9 @@ p {
   }
   .lungs .container {
     height: 100%;
+  }
+  .care .container .top .left .para{
+    line-height: 1.6rem;
   }
 }
 
@@ -2152,7 +2166,7 @@ p {
     margin-top: 0;
   }
   .care .container .top .left .para {
-    line-height: 1.4rem;
+    line-height: 1.3rem;
   }
   .care .container .top .right h3 {
     font-size: 28px;
@@ -2230,7 +2244,20 @@ p {
     min-width: 420px;
   }
   .lungs .container li {
+    line-height: 1.3rem;
+  }
+
+  .cards .card p{
+    font-size: 18px;
+  }
+  .about .container .right p{
+    line-height: 1.3rem;
+  }
+  .banner .container .left .para{
     line-height: 1.4rem;
+  }
+  .care .container .top .left{
+    width: 55%;
   }
 }
 
@@ -2468,9 +2495,10 @@ p {
   }
   .banner .container .bottom {
     padding: var(--container);
-    bottom: 11%;
+    bottom: 10%;
     align-items: center;
   }
+  
   .banner .container .bottom .body {
     width: 100%;
   }
@@ -2499,7 +2527,7 @@ p {
     padding: var(--container);
   }
   .about .container .right h3 {
-    width: 60%;
+    width: 58%;
     font-size: 18px;
   }
   .banner .container .left h2 {
@@ -2531,6 +2559,19 @@ p {
   .cards .card p{
     font-size: 14px;
     line-height: 1.4rem;
+  }
+  .about .heading h4{
+    width: 100%;
+  }
+  .footer .email a,.footer .right .email h6{
+    font-size: 20px;
+  }
+  .feedback .card h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .care .container .top .right h3{
+    font-size: 24px;
   }
 }
 
@@ -2581,7 +2622,14 @@ p {
     width: 130px;
     font-size: 16px;
   }
+  .footer .left{
+    height: 180px;
+  }
   .footer .email a,.footer .right .email h6{
     font-size: 18px;
+  }
+  .care .container .top .right h3{
+    font-size: 22px;
+    width: 100%;
   }
 }

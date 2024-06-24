@@ -758,14 +758,38 @@
       // counter'
 
       document.addEventListener("DOMContentLoaded", countvalue, false);
+      var counter = document.querySelectorAll(".number");
 
+      function countvalue(isCount) {
+        if (isCount) {
+          counter.forEach(function (item) {
+            let endVal = item.getAttribute("data-value");
+            let start;
+
+            if(endVal > 20){
+              start = endVal - 20;
+            }else{
+              start = 0;
+            }
+            var end = endVal;
+            var speed = 10;
+            
+            setInterval(function () {
+              start++;
+              if (start > end) {
+                return false;
+              }
+              item.innerText = start;
+            }, speed);
+          });
+        }
+      }
+      
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               countvalue(true);
-            } else {
-              countvalue(false);
             }
           });
         },
@@ -778,39 +802,6 @@
         observer.observe(client);
       });
 
-      var counter = document.querySelectorAll(".number");
-
-      function countvalue(e) {
-        if (countvalue) {
-          counter.forEach(function (k, v) {
-            var start = 0;
-            var end = counter[v].getAttribute("data-value");
-            var speed = 15;
-
-            setInterval(function () {
-              start++;
-              if (start > end) {
-                return false;
-              }
-              counter[v].innerText = start;
-            }, speed);
-          });
-        } else {
-          counter.forEach(function (k, v) {
-            var start = 0;
-            var end = counter[v].getAttribute("data-value");
-            var speed = 1.5;
-
-            setInterval(function () {
-              start++;
-              if (start > end) {
-                return false;
-              }
-              counter[v].innerText = end;
-            }, speed);
-          });
-        }
-      }
 
       // marquee
       var elements = $("ul.marquee-item-list li").length;
