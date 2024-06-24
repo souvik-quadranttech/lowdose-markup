@@ -688,7 +688,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./src/countfect.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
       integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
@@ -712,7 +711,6 @@
         });
 
         iniSwiper();
-        upValue();
       });
 
       // Swiper
@@ -787,7 +785,7 @@
           counter.forEach(function (k, v) {
             var start = 0;
             var end = counter[v].getAttribute("data-value");
-            var speed = 1.5;
+            var speed = 15;
 
             setInterval(function () {
               start++;
@@ -797,20 +795,20 @@
               counter[v].innerText = start;
             }, speed);
           });
-        }else{
+        } else {
           counter.forEach(function (k, v) {
-          var start = 0;
-          var end = counter[v].getAttribute("data-value");
-          var speed = 1.5;
+            var start = 0;
+            var end = counter[v].getAttribute("data-value");
+            var speed = 1.5;
 
-          setInterval(function () {
-            start++;
-            if (start > end) {
-              return false;
-            }
-            counter[v].innerText = end;
-          }, speed);
-        });
+            setInterval(function () {
+              start++;
+              if (start > end) {
+                return false;
+              }
+              counter[v].innerText = end;
+            }, speed);
+          });
         }
       }
 

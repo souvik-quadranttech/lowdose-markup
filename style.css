@@ -604,9 +604,11 @@ p {
 
 .cards .card .card-btn {
   opacity: 0;
+  display: none;
 }
 .cards .card .card-body {
   margin-bottom: 60px;
+  display: none;
   opacity: 0;
   transition: 1.5s ease;
 }
@@ -957,10 +959,6 @@ p {
 
 .service .container .bottom .card:last-child {
   margin-right: 0;
-}
-
-.service .container .bottom .card .card-image {
-  width: 130px;
 }
 
 .service .container .bottom .card .card-body {
@@ -1508,6 +1506,7 @@ p {
 
   .service .container .bottom .card .card-image {
     width: 120px;
+    height: 100%;
   }
 
   .footer .right {
@@ -1907,6 +1906,10 @@ p {
     height: 44%;
   }
 
+  .cards .card{
+    padding: 30px;
+  }
+
   .banner .container .top {
     margin-top: -45%;
   }
@@ -2179,6 +2182,7 @@ p {
   .cards .card .card-body {
     display: block;
     margin-bottom: 20px;
+    opacity: 1;
   }
 
   .cards .card .card-title-simple {
@@ -2214,6 +2218,7 @@ p {
   .cards .card .card-btn {
     display: flex;
     width: max-content;
+    opacity: 1;
   }
   .service .container .bottom .card .card-image {
     width: 75px;
@@ -2223,6 +2228,9 @@ p {
   }
   .footer .left img {
     min-width: 420px;
+  }
+  .lungs .container li {
+    line-height: 1.4rem;
   }
 }
 
@@ -2304,6 +2312,7 @@ p {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  
   .card.active p {
     font-size: var(--para);
   }
@@ -2314,6 +2323,7 @@ p {
   .about .container .right {
     width: 100%;
   }
+  
   .about .container .left {
     margin-right: 0;
     margin-top: 30px;
@@ -2387,8 +2397,9 @@ p {
   .lungs .heading h4 {
     width: 100%;
   }
-  .lungs .container li {
-    line-height: 1.4rem;
+
+  .service .container .bottom .card{
+    padding: 30px;
   }
   .service .container .bottom {
     flex-wrap: wrap;
@@ -2433,6 +2444,9 @@ p {
   }
   .footer .right {
     margin-bottom: 30px;
+  }
+  .care .container .bottom .count{
+    width: max-content;
   }
 }
 
@@ -2510,6 +2524,14 @@ p {
   .navbar .container {
     align-items: flex-start;
   }
+  .lungs .container .right{
+    margin-top: 40px;
+  }
+
+  .cards .card p{
+    font-size: 14px;
+    line-height: 1.4rem;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -2558,5 +2580,8 @@ p {
     padding-left: 10px;
     width: 130px;
     font-size: 16px;
+  }
+  .footer .email a,.footer .right .email h6{
+    font-size: 18px;
   }
 }
